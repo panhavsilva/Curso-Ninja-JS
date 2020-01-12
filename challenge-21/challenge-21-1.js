@@ -32,7 +32,7 @@
 
   function startTimer(){
     $inputCronometro.value++;
-    stopwatch = setTimeout(timer,1000);
+    stopwatch = setTimeout(startTimer,1000);
   }
 
   function stopTimer(){
