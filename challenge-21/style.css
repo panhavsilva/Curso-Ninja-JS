@@ -1,0 +1,17 @@
+h1, .principal, .cronometro-input, .cronometro-button{
+  text-align: center;
+  font-family: Verdana, sans-serif;
+}
+
+.cronometro-button {
+  border: 1px solid rgb(156, 155, 155);
+  border-radius: 1em;
+  margin-top: 1em;
+  font-size: 1.2em;
+  padding: 0 7px;
+}
+
+.cronometro-input {
+  border: 1px solid #FFF;
+  font-size: 4em;
+}
