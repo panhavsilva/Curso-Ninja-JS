@@ -19,7 +19,6 @@
   usar o nome que achar melhor, desde que ele seja semântico, ou seja, o nome
   dado ao elemento HTML deve definir o que o elemento é ou o que ele faz.
   */
-  // ?
 
   var $buttonStart = doc.querySelector('[data-js="button-start"]');
   var $buttonStop = doc.querySelector('[data-js="button-stop"]');
@@ -27,24 +26,21 @@
   var $inputCronometro = doc.querySelector('[data-js="input-cronometro"]');
   var stopwatch;
 
-  $buttonStart.addEventListener('click',function(){
-    timer();
-  },false);
+  $buttonStart.addEventListener('click', startTimer,false);
+  $buttonStop.addEventListener('click', stopTimer,false);
+  $buttonReset.addEventListener('click', resetTimer,false);
 
-  $buttonStop.addEventListener('click',function(){
-    clearTimeout(stopwatch);
-  },false);
-
-  $buttonReset.addEventListener('click',function(){
-    clearTimeout(stopwatch);
-    $inputCronometro.value = 0;
-  },false);
-
-  function timer(){
+  function startTimer(){
     $inputCronometro.value++;
-    if($inputCronometro.value > 10)
-      return;
     stopwatch = setTimeout(timer,1000);
   }
 
+  function stopTimer(){
+    clearTimeout(stopwatch);
+  }
+
+  function resetTimer(){
+    stopTimer();
+    $inputCronometro.value = 0;
+  }
 })(window,document);
