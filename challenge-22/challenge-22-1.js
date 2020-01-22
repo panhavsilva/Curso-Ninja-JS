@@ -46,7 +46,7 @@
 
   function sum () {
     console.log( 'Valores passados:',
-      Object.values(arguments).join(','),
+      Array.prototype.join.call(arguments, ','),
     );
     return "Resultado da soma é: " + Object.values(arguments).reduce(
       function(acumulado, atual){
