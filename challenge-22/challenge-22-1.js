@@ -48,9 +48,9 @@
     console.log( 'Valores passados:',
       Array.prototype.join.call(arguments, ','),
     );
-    return "Resultado da soma é: " + Object.values(arguments).reduce(
-      function(acumulado, atual){
-        return +acumulado + +atual;
+    return "Resultado da soma é: " +
+      Array.prototype.reduce.call(arguments, function(acumulado, atual){
+        return Number(acumulado) + Number(atual);
       },0)
     ;
   }
