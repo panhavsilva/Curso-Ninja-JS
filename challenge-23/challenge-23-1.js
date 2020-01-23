@@ -97,6 +97,7 @@
   }
 
   function buttonOperatorEqual(){
+    /*vai realizar os calculos solicitados e mostrar o resultado no input*/
     var result = eval($inputCalculator.value);
     return $inputCalculator.value = result;
   }
