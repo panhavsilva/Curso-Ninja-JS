@@ -44,6 +44,18 @@
   $buttonNine.addEventListener("click", buttonNumber,false);
   $buttonZero.addEventListener("click", buttonNumber,false);
 
+  /*eventos ao clicar nos botões de operação, irá mostrar no input o
+  operador e concatenar com o que já está no input*/
+  $buttonAddition.addEventListener("click", buttonOperator, false);
+  $buttonSubtraction.addEventListener("click", buttonOperatorNegative, false);
+  $buttonMultiplication.addEventListener("click", buttonOperator, false);
+  $buttonDivision.addEventListener("click", buttonOperator, false);
+
+  /*evento ao clicar no botão CE, irá zerar a calculadora*/
+  $buttonCe.addEventListener("click", buttonOperatorCe, false);
+
+  $buttonEqual.addEventListener("click", buttonOperatorEqual, false);
+
   function buttonOperator(){
     if($inputCalculator.value == 0){
       /*não permite iniciar um calculo com '*','/','+' */
@@ -73,17 +85,5 @@
     var result = eval($inputCalculator.value);
     return $inputCalculator.value = result;
   }
-
-  /*eventos ao clicar nos botões de operação, irá mostrar no input o
-  operador e concatenar com o que já está no input*/
-  $buttonAddition.addEventListener("click", buttonOperator, false);
-  $buttonSubtraction.addEventListener("click", buttonOperatorNegative, false);
-  $buttonMultiplication.addEventListener("click", buttonOperator, false);
-  $buttonDivision.addEventListener("click", buttonOperator, false);
-
-  /*evento ao clicar no botão CE, irá zerar a calculadora*/
-  $buttonCe.addEventListener("click", buttonOperatorCe, false);
-
-  $buttonEqual.addEventListener("click", buttonOperatorEqual, false);
 
 })(window,document);
