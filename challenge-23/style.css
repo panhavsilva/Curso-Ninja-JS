@@ -1,0 +1,37 @@
+h1{
+  text-align: center;
+}
+
+div.calculator{
+  box-sizing: border-box;
+  border: solid 1px rgb(230, 230, 230);
+  width: 20%;
+  margin: 0 auto;
+  background-color: rgb(230, 230, 230);
+}
+
+input[type=text] {
+  box-sizing: border-box;
+  border: 1px solid rgb(172, 172, 172) ;
+  text-align: center;
+  font-size: 25px;
+  width: 100%;
+  height: 40px;
+  margin: 0 auto;
+}
+
+button{
+  width: 20%;
+  height: 58px;
+  margin: 2px;
+  font-size: 20px;
+  text-align: center;
+}
+
+button#four, button#one, button#seven, button#zero{
+  margin-left: 15px;
+}
+
+button#ce, button#equal{
+  background-color: rgb(112, 112, 112);
+}
