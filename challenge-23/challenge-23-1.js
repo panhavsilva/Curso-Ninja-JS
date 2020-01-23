@@ -2,43 +2,24 @@
 
   'use strict';
 
-  /*não permite que seja digitado na input*/
-  doc.querySelector("#inputCalculator").readOnly = true;
-
   var $inputCalculator = doc.querySelector("#inputCalculator");
-  $inputCalculator.value = '0'; /*iniciar a calculadora com zero*/
 
   /*abaixo será passado o value para cada botão*/
   var $buttonOne = doc.querySelector("#one");
-  $buttonOne.value = '1';
   var $buttonTwo = doc.querySelector("#two");
-  $buttonTwo.value = '2';
   var $buttonThree = doc.querySelector("#three");
-  $buttonThree.value = '3';
   var $buttonFour = doc.querySelector("#four");
-  $buttonFour.value = '4';
   var $buttonFive = doc.querySelector("#five");
-  $buttonFive.value = '5';
   var $buttonSix = doc.querySelector("#six");
-  $buttonSix.value = '6';
   var $buttonSeven = doc.querySelector("#seven");
-  $buttonSeven.value = '7';
   var $buttonEight = doc.querySelector("#eight");
-  $buttonEight.value = '8';
   var $buttonNine = doc.querySelector("#nine");
-  $buttonNine.value = '9';
   var $buttonZero = doc.querySelector("#zero");
-  $buttonZero.value = '0';
   var $buttonAddition = doc.querySelector("#addition");
-  $buttonAddition.value = '+';
   var $buttonSubtraction = doc.querySelector("#subtraction");
-  $buttonSubtraction.value = '-';
   var $buttonMultiplication = doc.querySelector("#multiplication");
-  $buttonMultiplication.value = '/';
   var $buttonDivision = doc.querySelector("#division");
-  $buttonDivision.value = '*';
   var $buttonCe = doc.querySelector("#ce");
-  $buttonCe.value = '0';
 
   function buttonNumber(){
     /*inicia o calculo com o número passado e não em zero*/
@@ -51,26 +32,26 @@
 
   /*eventos ao clicar nos botões de números, irá mostrar os números
   no input e concatenar com o que já está no input*/
-  doc.querySelector("button.numbers#one").addEventListener("click",
-  buttonNumber);
-  doc.querySelector("button.numbers#two").addEventListener("click",
-  buttonNumber);
-  doc.querySelector("button.numbers#three").addEventListener("click",
-  buttonNumber);
-  doc.querySelector("button.numbers#four").addEventListener("click",
-  buttonNumber);
-  doc.querySelector("button.numbers#five").addEventListener("click",
-  buttonNumber);
-  doc.querySelector("button.numbers#six").addEventListener("click",
-  buttonNumber);
-  doc.querySelector("button.numbers#seven").addEventListener("click",
-  buttonNumber);
-  doc.querySelector("button.numbers#eight").addEventListener("click",
-  buttonNumber);
-  doc.querySelector("button.numbers#nine").addEventListener("click",
-  buttonNumber);
-  doc.querySelector("button.numbers#zero").addEventListener("click",
-  buttonNumber);
+  doc.querySelector('[data-js="one"]').addEventListener("click",
+  buttonNumber,false);
+  doc.querySelector('[data-js="two"]').addEventListener("click",
+  buttonNumber,false);
+  doc.querySelector('[data-js="three"]').addEventListener("click",
+  buttonNumber,false);
+  doc.querySelector('[data-js="four"]').addEventListener("click",
+  buttonNumber,false);
+  doc.querySelector('[data-js="five"]').addEventListener("click",
+  buttonNumber,false);
+  doc.querySelector('[data-js="six"]').addEventListener("click",
+  buttonNumber,false);
+  doc.querySelector('[data-js="seven"]').addEventListener("click",
+  buttonNumber,false);
+  doc.querySelector('[data-js="eight"]').addEventListener("click",
+  buttonNumber,false);
+  doc.querySelector('[data-js="nine"]').addEventListener("click",
+  buttonNumber,false);
+  doc.querySelector('[data-js="zero"]').addEventListener("click",
+  buttonNumber,false);
 
   function buttonOperator(){
     if($inputCalculator.value == 0){
@@ -104,20 +85,20 @@
 
   /*eventos ao clicar nos botões de operação, irá mostrar no input o
   operador e concatenar com o que já está no input*/
-  doc.querySelector("button.operator#addition").addEventListener("click",
-  buttonOperator);
-  doc.querySelector("button.operator#subtraction").addEventListener("click",
-  buttonOperatorNegative);
-  doc.querySelector("button.operator#multiplication").addEventListener("click",
-  buttonOperator);
-  doc.querySelector("button.operator#division").addEventListener("click",
-  buttonOperator);
+  doc.querySelector('[data-js="addition"]').addEventListener("click",
+  buttonOperator, false);
+  doc.querySelector('[data-js="subtraction"]').addEventListener("click",
+  buttonOperatorNegative, false);
+  doc.querySelector('[data-js="multiplication"]').addEventListener("click",
+  buttonOperator, false);
+  doc.querySelector('[data-js="division"]').addEventListener("click",
+  buttonOperator, false);
 
   /*evento ao clicar no botão CE, irá zerar a calculadora*/
-  doc.querySelector("button.operator#ce").addEventListener("click",
-  buttonOperatorCe);
+  doc.querySelector('[data-js="ce"]').addEventListener("click",
+  buttonOperatorCe, false);
 
-  doc.querySelector("button.operator#equal").addEventListener("click",
-  buttonOperatorEqual);
+  doc.querySelector('[data-js="equal"]').addEventListener("click",
+  buttonOperatorEqual, false);
 
 })(window,document);

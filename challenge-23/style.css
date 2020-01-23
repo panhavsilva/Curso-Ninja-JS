@@ -28,10 +28,11 @@ button{
   text-align: center;
 }
 
-button#four, button#one, button#seven, button#zero{
+button[data-js="four"], button[data-js="one"], button[data-js="seven"],
+button[data-js="zero"]{
   margin-left: 15px;
 }
 
-button#ce, button#equal{
+button[data-js="ce"], button[data-js="equal"]{
   background-color: rgb(112, 112, 112);
 }
