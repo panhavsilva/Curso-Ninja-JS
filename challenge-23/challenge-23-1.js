@@ -81,7 +81,7 @@
   }
 
   function buttonOperatorEqual(){
-    $inputCalculator.value = $inputCalculator.value.replace(/\D$/,'')
+    $inputCalculator.value = $inputCalculator.value.replace(/\D$/,'');
     /*vai realizar os calculos solicitados e mostrar o resultado no input*/
     var result = eval($inputCalculator.value);
     return $inputCalculator.value = result;
